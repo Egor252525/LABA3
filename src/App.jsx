@@ -12,7 +12,6 @@ import Profile from './pages/Profile';
 import Loader from './components/Loader';
 import ErrorBoundary from './components/ErrorBoundary';
 
-// Компонент для защищенных маршрутов
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = useAuth();
   
@@ -21,7 +20,6 @@ const ProtectedRoute = ({ children }) => {
   return user ? children : <Navigate to="/login" state={{ from: location }} />;
 };
 
-// Компонент для публичных маршрутов (только для неавторизованных)
 const PublicRoute = ({ children }) => {
   const { user, loading } = useAuth();
   
@@ -40,11 +38,9 @@ function AppContent() {
       <Header />
       <main className="main-content">
         <Routes>
-          {/* Публичные маршруты */}
           <Route path="/" element={<Catalog />} />
           <Route path="/cart" element={<Cart />} />
           
-          {/* Защищенные маршруты - только для авторизованных */}
           <Route 
             path="/profile" 
             element={
@@ -53,8 +49,7 @@ function AppContent() {
               </ProtectedRoute>
             } 
           />
-          
-          {/* Публичные маршруты - только для неавторизованных */}
+
           <Route 
             path="/login" 
             element={
@@ -72,7 +67,6 @@ function AppContent() {
             } 
           />
           
-          {/* Fallback route */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </main>

@@ -12,7 +12,6 @@ export class ReviewService {
     }
   }
 
-  // Создать отзыв
   static async createReview(reviewData) {
     try {
       const response = await api.post('/Reviews', reviewData);
@@ -34,7 +33,6 @@ export class ReviewService {
     }
   }
 
-  // Удалить отзыв
   static async deleteReview(reviewId) {
     try {
       const response = await api.delete(`/Reviews/${reviewId}`);

@@ -1,4 +1,3 @@
-// src/components/Layout/Header.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
@@ -10,7 +9,6 @@ const Header = () => {
 
   const handleLogout = () => {
     logout();
-    // Редирект на главную после выхода
     window.location.href = '/';
   };
 
@@ -19,7 +17,7 @@ const Header = () => {
       <div className="header-container">
         <div className="logo">
           <Link to="/">
-            <h1>Electronics Shop</h1>
+            <h1>Магазин электроники</h1>
           </Link>
         </div>
 

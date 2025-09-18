@@ -12,7 +12,6 @@ export const useAuth = () => {
   return context;
 };
 
-// Локальные DTO функции
 const loginDTO = (email, password) => ({
   email,
   password
@@ -51,7 +50,7 @@ export const AuthProvider = ({ children }) => {
     try {
       setLoading(true);
       
-      // ВРЕМЕННО: моковая авторизация до настройки API
+      // Моковая авторизация 
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       const mockUser = {
@@ -83,7 +82,7 @@ export const AuthProvider = ({ children }) => {
     try {
       setLoading(true);
       
-      // ВРЕМЕННО: моковая регистрация до настройки API
+      // Моковая регистрация
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       const mockUser = {

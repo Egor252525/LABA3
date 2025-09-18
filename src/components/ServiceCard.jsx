@@ -35,7 +35,6 @@ const ServiceCard = ({ service }) => {
   const handleSubmitReview = async (reviewData) => {
     try {
       await ReviewService.createReview(reviewData);
-      // Обновляем список отзывов
       const data = await ReviewService.getServiceReviews(service.serviceId);
       setReviews(data);
       setShowReviewForm(false);

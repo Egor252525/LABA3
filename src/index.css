@@ -1,7 +1,8 @@
 * {
   margin: 0;
-  padding: 0;
+  padding: 1;
   box-sizing: border-box;
+  justify-content: center;
 }
 
 body {
@@ -214,7 +215,8 @@ nav a:hover {
   text-align: center;
 }
 
-/* Стили для отзывов */
+
+
 .reviews-list {
   margin-top: 1rem;
 }
@@ -266,7 +268,8 @@ nav a:hover {
   font-size: 1rem;
 }
 
-/* Форма отзыва */
+
+
 .review-form {
   margin-top: 1rem;
   padding: 1rem;
@@ -298,7 +301,8 @@ nav a:hover {
   color: #7f8c8d;
 }
 
-/* Личный кабинет */
+
+
 .profile-page {
   max-width: 1000px;
   margin: 0 auto;
@@ -329,7 +333,6 @@ nav a:hover {
   color: #3498db;
 }
 
-/* Стили для записей */
 .appointments-list {
   display: flex;
   flex-direction: column;
@@ -359,7 +362,8 @@ nav a:hover {
 .status-cancelled { background: #e74c3c; color: white; }
 .status-default { background: #95a5a6; color: white; }
 
-/* Формы */
+
+
 .profile-form,
 .password-form {
   max-width: 500px;
@@ -383,8 +387,8 @@ nav a:hover {
   border: 1px solid #f5c6cb;
 }
 
-/* src/index.css */
-/* Стили для header */
+
+
 .header {
   background: #2c3e50;
   color: white;
@@ -479,8 +483,8 @@ nav a:hover {
   gap: 1rem;
 }
 
-/* Основной контент */
 .main-content {
   min-height: calc(100vh - 80px);
   padding: 2rem 0;
 }
+

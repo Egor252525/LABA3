@@ -16,7 +16,6 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Получаем путь для редиректа после авторизации
   const from = location.state?.from?.pathname || '/profile';
 
   const handleInputChange = (fieldName, value) => {
@@ -45,7 +44,6 @@ const Login = () => {
       );
       
       if (result.success) {
-        // Редирект на предыдущую страницу или в профиль
         navigate(from, { replace: true });
       } else {
         setSubmitError(result.message);
